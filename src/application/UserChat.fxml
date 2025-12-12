@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-border-color: #532b12;" stylesheets="@/application/menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserChatController">
+   <children>
+      <VBox prefHeight="550.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="32.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #532b12;" VBox.vgrow="NEVER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label text="Hỗ trợ khách hàng" textFill="#532b12">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="598.0" style="-fx-background-color: #dcdcdc;">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Tôi ở đây để giúp bạn" textFill="#532b12" />
+               </children>
+            </HBox>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" vvalue="1.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="vBoxMessageContainer" minHeight="-Infinity" spacing="10.0" style="-fx-background-color: white;">
+                     <padding>
+                        <Insets bottom="150.0" />
+                     </padding>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </ScrollPane>
+            <HBox alignment="CENTER" style="-fx-background-color: white; -fx-border-color: #532b12;">
+               <children>
+                  <TextArea fx:id="txtMessage" maxWidth="500.0" prefHeight="10.0" prefWidth="500.0" style="-fx-background-color: transparent;" styleClass="no-shadow" stylesheets="@menu.css" wrapText="true" />
+                  <Button layoutX="564.0" layoutY="20.0" onAction="#sendMessage" prefHeight="40.0" prefWidth="24.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/images__1_-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" stylesheets="@/application/application.css" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <content>
+      <BorderPane maxHeight="-Infinity" styleClass="white-bg" stylesheets="@/application/menu.css">
+         <left>
+            <AnchorPane prefHeight="886.0" prefWidth="226.0" stylesheets="@/application/menu.css" BorderPane.alignment="CENTER">
+               <styleClass>
+                  <String fx:value="shadow-top-menu" />
+                  <String fx:value="nav-menu" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="770.4" prefWidth="226.4" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnAll" mnemonicParsing="false" onAction="#displayAll" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Tất cả">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCoffee" mnemonicParsing="false" onAction="#displayCoffee" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Cà phê">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnAme" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#displayAmericano" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Americano">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnTraiXay" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#displayTraiXay" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Trái cây xay">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMilkTea" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#displayMilkTea" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Trà sữa">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnTraXanh" layoutX="10.0" layoutY="228.0" mnemonicParsing="false" onAction="#displayTraXanh" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Trà xanh - Chocolate">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnThucUong" layoutX="10.0" layoutY="288.0" mnemonicParsing="false" onAction="#displayThucUong" prefHeight="40.0" prefWidth="226.4" styleClass="nav-btn" text="Thức uống đá xay">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <content>
+                  <AnchorPane maxHeight="-Infinity">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="-14.0" layoutY="3.0" maxHeight="-Infinity" style="-fx-background-color: white;" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1010.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefWidth="316.0" spacing="10.0" style="-fx-background-color: #ECEFF1;" styleClass="search-box" stylesheets="@menu.css">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="SEARCH" size="18" text="" />
+                                          <TextField fx:id="textField" onKeyPressed="#enterSearch" prefHeight="26.0" prefWidth="281.0" promptText="What do you want to buy ?" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                       <padding>
+                                          <Insets left="40.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefWidth="1010.0">
+                                 <children>
+                                    <Label fx:id="labelType" text="Drinks">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308">
+                                 <children>
+                                    <FlowPane fx:id="productListContainer" hgap="20.0" maxHeight="-Infinity" prefHeight="748.0" prefWrapLength="5.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="228.0" stylesheets="@menu.css">
+                                             <children>
+                                                <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="190.0" prefWidth="233.0">
+                                                         <children>
+                                                            <ImageView fx:id="productImage" fitHeight="224.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="false">
+                                                               <image>
+                                                                  <Image url="@../tachnen/snapedit_1742120171085-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox prefHeight="43.0" prefWidth="247.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets left="25.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Label fx:id="productName" text="Name" textFill="#a17870">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Price">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="219.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="button">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="SHOPPING_CART" size="2EM" text="" wrappingWidth="33.0" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow-bottom-menu" />
+                                                <String fx:value="card-clip" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="228.0" stylesheets="@menu.css">
+                                             <children>
+                                                <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="190.0" prefWidth="233.0">
+                                                         <children>
+                                                            <ImageView fx:id="productImage1" fitHeight="224.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="false">
+                                                               <image>
+                                                                  <Image url="@../tachnen/snapedit_1742120180494-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox prefHeight="43.0" prefWidth="247.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets left="25.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Label fx:id="productName1" text="Name">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Price">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="219.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="button">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="SHOPPING_CART" size="2EM" text="" wrappingWidth="33.0" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow-bottom-menu" />
+                                                <String fx:value="card-clip" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="228.0" stylesheets="@menu.css">
+                                             <children>
+                                                <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="190.0" prefWidth="233.0">
+                                                         <children>
+                                                            <ImageView fx:id="productImage2" fitHeight="224.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="false">
+                                                               <image>
+                                                                  <Image url="@../tachnen/snapedit_1742120181445-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox prefHeight="43.0" prefWidth="247.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets left="25.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Label fx:id="productName2" text="Name">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Price">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="219.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="button">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="SHOPPING_CART" size="2EM" text="" wrappingWidth="33.0" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow-bottom-menu" />
+                                                <String fx:value="card-clip" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="466.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="228.0" stylesheets="@menu.css">
+                                             <children>
+                                                <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="190.0" prefWidth="233.0">
+                                                         <children>
+                                                            <ImageView fx:id="productImage21" fitHeight="224.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="false">
+                                                               <image>
+                                                                  <Image url="@../tachnen/snapedit_1742120182205-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox prefHeight="43.0" prefWidth="247.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets left="25.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Label fx:id="productName21" text="Name">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Price">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="219.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="button">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="SHOPPING_CART" size="2EM" text="" wrappingWidth="33.0" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow-bottom-menu" />
+                                                <String fx:value="card-clip" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="754.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="228.0" stylesheets="@menu.css">
+                                             <children>
+                                                <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="190.0" prefWidth="233.0">
+                                                         <children>
+                                                            <ImageView fx:id="productImage211" fitHeight="224.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="false">
+                                                               <image>
+                                                                  <Image url="@../tachnen/snapedit_1742120182205-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox prefHeight="43.0" prefWidth="247.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets left="25.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Label fx:id="productName211" text="Name">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Price">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="219.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="194.0" text="button">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <FontAwesomeIconView glyphName="SHOPPING_CART" size="2EM" text="" wrappingWidth="33.0" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow-bottom-menu" />
+                                                <String fx:value="card-clip" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </FlowPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

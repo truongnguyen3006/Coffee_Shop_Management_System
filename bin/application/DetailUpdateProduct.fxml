@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane stylesheets="@/application/menu.css" prefHeight="466.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailUpdateProductController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ImageView fx:id="productDetailImage" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../Product/snapedit_1742120171085-removebg-preview.png" />
+               </image>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox prefHeight="519.0" prefWidth="620.0" spacing="8.0" GridPane.columnIndex="1">
+         <children>
+            <Label fx:id="productDetailName" prefHeight="58.0" prefWidth="411.0" text="Name" textFill="#532b12">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="productDetailsCode" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="411.0" text="Code" textFill="#532b12">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label fx:id="productDetailPrice" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="39.0" text="65.000 " textFill="#34231a">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="26.0" text="Đ" textFill="#34231a">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane layoutX="241.60000610351562" layoutY="7.400000095367432">
+                     <children>
+                        <Button fx:id="btnDecreaseQuantity" mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="26.0" prefWidth="26.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="-">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="quantityLabel" layoutX="47.0" maxWidth="-Infinity" minWidth="-Infinity" text="1" textFill="#532b12">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnIncreaseQuantity" layoutX="78.39999389648438" mnemonicParsing="false" onAction="#increaseQuantity" prefHeight="26.0" prefWidth="26.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="+">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label text="CHOOSE SIZE" textFill="#532b12">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="44.0" prefWidth="620.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="80.0" spacing="3.0">
+                     <children>
+                        <Button fx:id="btnS" mnemonicParsing="false" onAction="#selectSizeS" prefHeight="60.0" prefWidth="40.0" style="-fx-border-radius: 15;" stylesheets="@menu.css" text="S">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <styleClass>
+                              <String fx:value="btn-choose-size" />
+                              <String fx:value="btn-addtocart" />
+                           </styleClass>
+                        </Button>
+                        <Label fx:id="price0" text="+0đ" textFill="#532b12">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="150.0" spacing="3.0">
+                     <children>
+                        <Button fx:id="btnM" mnemonicParsing="false" onAction="#selectSizeM" prefHeight="60.0" prefWidth="40.0" style="-fx-border-radius: 15;" styleClass="btn-choose-size" stylesheets="@menu.css" text="M">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="price6" prefHeight="27.0" prefWidth="68.0" text="+6.000đ" textFill="#532b12">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefWidth="150.0" spacing="3.0">
+                     <children>
+                        <Button fx:id="btnL" mnemonicParsing="false" onAction="#selectSizeL" prefHeight="27.0" prefWidth="50.0" style="-fx-border-radius: 15;" styleClass="btn-choose-size" stylesheets="@menu.css" text="L">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="price10" prefHeight="27.0" prefWidth="126.0" text="+10.000đ" textFill="#532b12">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label text="Topping" textFill="#532b12">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="640.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btntopping1" mnemonicParsing="false" onAction="#toggleTopping1" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Thạch sương sáo + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btntopping2" mnemonicParsing="false" onAction="#toggleTopping2" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Thạch Kim Quất + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="392.0" prefHeight="40.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btntopping3" mnemonicParsing="false" onAction="#toggleTopping3" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Thạch Cà Phê + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btntopping4" mnemonicParsing="false" onAction="#toggleTopping4" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Foam Phô Mai + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="436.0" prefHeight="40.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btntopping5" mnemonicParsing="false" onAction="#toggleTopping5" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Shot Espresso + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btntopping6" mnemonicParsing="false" onAction="#toggleTopping6" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Sốt Caramel + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="507.0" prefHeight="40.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btntopping7" mnemonicParsing="false" onAction="#toggleTopping7" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Trân Châu Trắng + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btntopping8" mnemonicParsing="false" onAction="#toggleTopping8" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Đào Miếng + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="479.0" prefHeight="40.0" prefWidth="640.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btntopping9" mnemonicParsing="false" onAction="#toggleTopping9" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Hạt Sen  + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btntopping10" mnemonicParsing="false" onAction="#toggleTopping10" prefHeight="35.0" prefWidth="165.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Trái Vải + 10.000đ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="640.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateProductItem" prefHeight="30.0" prefWidth="150.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Cập nhật">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnCancel" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelUpdate" prefHeight="30.0" prefWidth="150.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Hủy">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" top="5.0" />
+         </GridPane.margin>
+      </VBox>
+   </children>
+</GridPane>

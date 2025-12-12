@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox stylesheets="@/application/menu.css" prefHeight="532.0" prefWidth="840.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AccountDetails">
+   <children>
+      <VBox alignment="CENTER" prefWidth="800.0" spacing="20.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Thông tin cá nhân" textFill="#532b12">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="354.0" prefWidth="800.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="95.60001220703126" minHeight="10.0" prefHeight="79.00000381469727" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="125.19998779296876" minHeight="10.0" prefHeight="87.39998779296876" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="142.40001525878907" minHeight="10.0" prefHeight="73.79999694824218" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="142.40001525878907" minHeight="10.0" prefHeight="67.4000030517578" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Họ &amp; tên">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <TextField fx:id="textFieldName" prefHeight="50.0" prefWidth="400.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white; -fx-border-color: #532b12;">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="20.0" layoutY="10.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Số điện thoại">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <TextField fx:id="textFieldPhone" prefHeight="50.0" prefWidth="400.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white; -fx-border-color: #532b12;">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="10.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Email">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <TextField fx:id="textFieldEmail" prefHeight="50.0" prefWidth="400.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: white; -fx-border-color: #532b12;">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="142.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Giới tính">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <ComboBox fx:id="cbGender" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #532b12; -fx-border-radius: 5;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="430.0" layoutY="87.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Tỉnh/thành phố">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <ComboBox fx:id="cbProvince" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #532b12; -fx-border-radius: 5;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="173.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Quận/huyện">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <ComboBox fx:id="cbDistrict" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #532b12; -fx-border-radius: 5;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="410.0" layoutY="173.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Phường/xã">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <ComboBox fx:id="cbWard" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #532b12; -fx-border-radius: 5;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Địa chỉ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" styleClass="shadow-card" stylesheets="@menu.css">
+                           <children>
+                              <TextArea fx:id="textAreaAddress" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: #532b12; -fx-border-radius: 5;" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="122.0" prefWidth="840.0" spacing="20.0" stylesheets="@menu.css">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchChangePassword" styleClass="btn-addtocart" text="Đổi mật khẩu" />
+            <Button mnemonicParsing="false" onAction="#btnSaveChange" styleClass="btn-addtocart" text="Lưu thay đổi" />
+            <Button mnemonicParsing="false" onAction="#reload" styleClass="btn-addtocart" text="Làm mới">
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

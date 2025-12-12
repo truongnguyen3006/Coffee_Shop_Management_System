@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane stylesheets="@/application/menu.css" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddAndUpdateProductController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAddProduct" minHeight="30.0" mnemonicParsing="false" onAction="#handleSaveProduct" prefWidth="80.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Xác nhận" textFill="#532b12">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnCancelProduct" layoutX="271.0" layoutY="20.0" minHeight="30.0" mnemonicParsing="false" onAction="#handleCancelProduct" prefWidth="80.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Hủy" textFill="#532b12">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox alignment="CENTER" prefHeight="235.0" prefWidth="350.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="337.0" prefWidth="350.0">
+               <children>
+                  <VBox spacing="12.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="80.0" text="Tên Sản phẩm" textFill="#532b12" />
+                        <Label prefHeight="34.0" prefWidth="47.0" text="Giá bán" textFill="#532b12" />
+                        <Label prefHeight="34.0" prefWidth="82.0" text="Mã" textFill="#532b12" />
+                        <Label prefHeight="34.0" prefWidth="82.0" text="Loại sản phẩm" textFill="#532b12" />
+                        <Label prefHeight="34.0" prefWidth="60.0" text="Trạng thái" textFill="#532b12" />
+                        <Label prefHeight="34.0" prefWidth="62.0" text="Mô tả" textFill="#532b12" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="addName" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextField>
+                        <TextField fx:id="addPrice" layoutX="10.0" layoutY="40.0" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextField>
+                        <TextField fx:id="addCode" layoutX="10.0" layoutY="262.0" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextField>
+                        <ComboBox fx:id="addTypeProduct" prefHeight="26.0" prefWidth="203.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="addStatus" prefHeight="26.0" prefWidth="202.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <TextArea fx:id="addDescription" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #532b12;" wrapText="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="298.0" prefWidth="240.0" style="-fx-border-color: #532b12; -fx-background-color: white;" styleClass="shadow-card" stylesheets="@menu.css">
+               <children>
+                  <ImageView fx:id="addImage" fitHeight="280.0" fitWidth="234.0" pickOnBounds="true" />
+               </children>
+            </VBox>
+            <Button fx:id="chooseImage" mnemonicParsing="false" onAction="#chooseImage" prefHeight="30.0" prefWidth="100.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Chọn hình ảnh" textFill="#532b12">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <top>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbAddAndUpdate" textFill="#532b12">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

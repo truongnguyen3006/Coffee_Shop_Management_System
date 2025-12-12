@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProductManagementController">
+   <children>
+      <VBox fx:id="adminChat" maxHeight="400.0" prefHeight="400.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/1458201.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="400.0" vvalue="1.0">
+               <content>
+                  <VBox fx:id="vBoxMessageContainer" maxHeight="-Infinity" minHeight="-Infinity" spacing="10.0" style="-fx-background-color: white;">
+                     <padding>
+                        <Insets bottom="150.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" style="-fx-background-color: white;">
+               <children>
+                  <Button prefHeight="19.0" prefWidth="24.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/png-clipart-computer-icons-symbol-email-attachment-paper-clip-symbol-miscellaneous-text-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <HBox alignment="CENTER" spacing="5" style="-fx-border-radius: 20; -fx-border-color: black;">
+                     <children>
+                        <TextField fx:id="txtMessage" prefWidth="600.0" promptText="Nhập tin nhắn" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button layoutX="564.0" layoutY="20.0" prefHeight="19.0" prefWidth="24.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/images__1_-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="listUser" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label style="-fx-font-size: 20px;" text="Chat Hỗ Trợ - Admin" />
+            <HBox spacing="10">
+               <children>
+                  <ListView fx:id="lvUserList" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="productManager">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                  <Button fx:id="btnAddProduct" mnemonicParsing="false" onAction="#switchAdd" text="add" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <TextField />
+                        <Button mnemonicParsing="false" text="Search" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <TextField />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <TextField />
+                        <Button mnemonicParsing="false" text="Button" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ScrollPane>
+               <content>
+                  <TableView fx:id="productTable" prefHeight="542.0" prefWidth="1062.0">
+                    <columns>
+                        <TableColumn fx:id="thumbnail" prefWidth="90.40004920959473" text="Thumbnail " />
+                      <TableColumn fx:id="productName" prefWidth="114.40003204345703" text="Product Name" />
+                        <TableColumn fx:id="price" prefWidth="104.79998779296875" text="Price" />
+                        <TableColumn fx:id="description" prefWidth="180.00003051757812" text="Description" />
+                        <TableColumn fx:id="status" prefWidth="65.5999755859375" text="Status" />
+                        <TableColumn fx:id="productCode" prefWidth="84.00006103515625" text="Product Code" />
+                        <TableColumn fx:id="date" prefWidth="129.5999755859375" text="Date" />
+                        <TableColumn fx:id="buttonColumn" prefWidth="112.79986572265625" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

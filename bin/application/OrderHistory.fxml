@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderHistoryController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefWidth="450.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #532b12;">
+         <children>
+            <Label text="Lịch sử đơn hàng" textFill="#532b12">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="historyTable" prefHeight="509.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="orderID" prefWidth="56.0000656247139" text="ID đơn " />
+                  <TableColumn fx:id="orderTotal" prefWidth="103.20000839233398" text="Tổng tiền đơn" />
+                  <TableColumn fx:id="dateOrder" prefWidth="144.00001525878906" text="Ngày đặt" />
+                  <TableColumn fx:id="buttonDetailOrder" minWidth="0.0" prefWidth="87.20001220703125" />
+               </columns>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+</HBox>

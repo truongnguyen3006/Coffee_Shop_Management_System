@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#switchDetailProduct" prefHeight="364.0" prefWidth="228.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProductCardController">
+   <children>
+      <VBox layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="190.0" prefWidth="233.0">
+               <children>
+                  <ImageView fx:id="productImage" fitHeight="224.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="false">
+                     <image>
+                        <Image url="@../Image/137-96803.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox prefHeight="96.0" prefWidth="228.0" spacing="5.0">
+               <children>
+                  <Label fx:id="productName" text="Name" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label fx:id="productPrice" text="Price" textFill="#34231a">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text=" Đ" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="shadow-bottom-menu" />
+      <String fx:value="card-clip" />
+      <String fx:value="white-bg" />
+   </styleClass>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

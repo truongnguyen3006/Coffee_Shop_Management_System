@@ -1,0 +1,100 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.background-white {
+    -fx-background-color: #ffff;
+}
+
+.background-transparent {
+    -fx-background-color: transparent;
+}
+
+
+.title-label {
+    -fx-text-fill: #5b1b12;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.nav-button {
+     -fx-text-fill: #5b1b12;
+    -fx-background-color: transparent;
+    -fx-font-size: 16;
+    
+}
+
+.signup-button {
+    -fx-text-fill: white;
+    -fx-background-color: #430e03;
+    -fx-background-radius: 20;
+}
+
+.title-welcome{
+	-fx-font-size: 16;
+	-fx-text-fill: #5b1b12;
+}
+
+.title-CoffeeShop{
+	-fx-font-size: 40;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5b1b12;
+}
+
+.content-box {
+    -fx-padding: 40;
+}
+
+.green-box {
+    -fx-background-color: #ae4f3a;
+    -fx-padding: 40;
+}
+
+.dark-box {
+    -fx-background-color: #692d20;
+    -fx-padding: 40;
+}
+
+.left-box{
+	-fx-background-color: #430e03;
+	-fx-padding: 40;
+}
+
+.right-box{
+	-fx-background-color: #430e03;
+	-fx-padding: 40;
+	
+}
+
+.section-title {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.section-text {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+
+.order-button {
+    -fx-background-color: #430e03;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-padding: 10 20;
+}
+
+.overlay-box {
+    -fx-padding: 40;
+}
+
+.join-button {
+    -fx-background-color: white;
+    -fx-text-fill: #ae4f3a;
+    -fx-font-size: 16;
+    -fx-padding: 10 20;
+}
+
+.border-cart {
+    -fx-border-color: transparent transparent gray transparent; /* Chỉ viền dưới màu đen */
+    -fx-border-width: 0 0 1px 0; /* Độ dày viền dưới 2px */
+}
+

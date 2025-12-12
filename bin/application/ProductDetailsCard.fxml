@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" stylesheets="@/application/menu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProductDetailsCardController">
+   <content>
+      <VBox style="-fx-background-color: white;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backMenu" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_LEFT" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <GridPane prefHeight="635.0" prefWidth="1280.0" style="-fx-background-color: white;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <ImageView fx:id="productDetailImage" fitHeight="471.0" fitWidth="462.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/eclipse-workspace/coffeeShopManagementSystem/src/Product/snapedit_1742120171085-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Mô tả sản phẩm" textFill="#532b12">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="productDetailDescription" text="Desc" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="519.0" prefWidth="620.0" spacing="8.0" GridPane.columnIndex="1">
+                     <children>
+                        <VBox>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="productDetailName" maxWidth="700.0" minHeight="-Infinity" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" textFill="#532b12" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label fx:id="productDetailsCode" layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="411.0" text="Code" textFill="#532b12">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <AnchorPane prefHeight="74.0" prefWidth="670.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="74.0" AnchorPane.leftAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="productDetailPrice" text="1111" textFill="#532b12">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="46.0" prefWidth="41.0" text="Đ" textFill="#34231a">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <AnchorPane layoutX="385.0" layoutY="17.0" prefHeight="40.0" prefWidth="205.0">
+                                 <children>
+                                    <Button fx:id="btnSub" layoutX="14.0" mnemonicParsing="false" onAction="#decreaseQuantity" prefHeight="40.0" prefWidth="40.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="-">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="quantity" layoutX="87.0" layoutY="2.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="54.0" text="12" textFill="#532b12">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnAdd" layoutX="144.0" mnemonicParsing="false" onAction="#inreaseQuantity" prefHeight="40.0" prefWidth="40.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="+">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <Label text="Chọn kích cỡ" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="44.0" prefWidth="620.0" spacing="40.0">
+                           <children>
+                              <HBox alignment="CENTER" spacing="3.0">
+                                 <children>
+                                    <Button fx:id="btnS" mnemonicParsing="false" onAction="#btnS" prefHeight="60.0" prefWidth="80.0" style="-fx-border-radius: 15;" styleClass="btn-choose-size" stylesheets="@menu.css" text="S">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="price0" text="+0đ" textFill="#532b12">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="3.0">
+                                 <children>
+                                    <Button fx:id="btnM" mnemonicParsing="false" onAction="#btnM" prefHeight="60.0" prefWidth="80.0" style="-fx-border-radius: 15;" styleClass="btn-choose-size" stylesheets="@menu.css" text="M">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="price6" text="+6.000đ" textFill="#532b12">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="3.0">
+                                 <children>
+                                    <Button fx:id="btnL" mnemonicParsing="false" onAction="#btnL" prefHeight="60.0" prefWidth="80.0" style="-fx-border-radius: 15;" styleClass="btn-choose-size" stylesheets="@menu.css" text="L">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="price10" text="+10.000đ" textFill="#532b12">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label text="Topping" textFill="#532b12">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="640.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btntopping1" mnemonicParsing="false" onAction="#toggleTopping1" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Thạch sương sáo + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btntopping2" mnemonicParsing="false" onAction="#toggleTopping2" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Thạch Kim Quất + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="392.0" prefHeight="40.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btntopping3" mnemonicParsing="false" onAction="#toggleTopping3" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Thạch Cà Phê + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btntopping4" mnemonicParsing="false" onAction="#toggleTopping4" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Foam Phô Mai + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="436.0" prefHeight="40.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btntopping5" mnemonicParsing="false" onAction="#toggleTopping5" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Shot Espresso + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btntopping6" mnemonicParsing="false" onAction="#toggleTopping6" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Sốt Caramel + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="507.0" prefHeight="40.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btntopping7" mnemonicParsing="false" onAction="#toggleTopping7" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Trân Châu Trắng + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btntopping8" mnemonicParsing="false" onAction="#toggleTopping8" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Đào Miếng + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="479.0" prefHeight="40.0" prefWidth="640.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btntopping9" mnemonicParsing="false" onAction="#toggleTopping9" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Hạt Sen  + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btntopping10" mnemonicParsing="false" onAction="#toggleTopping10" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="Trái Vải + 10.000đ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="42.0" prefWidth="640.0">
+                           <children>
+                              <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#addToCart" prefHeight="35.0" prefWidth="300.0" styleClass="btn-addtocart" stylesheets="@menu.css" text="Thêm vào giỏ hàng">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <VBox prefHeight="229.0" prefWidth="1280.0" style="-fx-background-color: white;">
+               <children>
+                  <Label text="Sản phẩm liên quan" textFill="#532b12">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <FlowPane fx:id="listHintProduct" columnHalignment="CENTER" hgap="21.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWrapLength="5.0" style="-fx-background-color: white;" vgap="30.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox>
+                           <children>
+                              <AnchorPane minHeight="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="190.0" prefWidth="233.0">
+                                             <children>
+                                                <ImageView fx:id="productImage" fitHeight="220.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="false">
+                                                   <image>
+                                                      <Image url="@../Product/snapedit_1742120180494-removebg-preview.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="productName" maxWidth="200.0" minHeight="-Infinity" text="The Coffee House Sữa Đá" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="productPrice" text="Price" textFill="#34231a">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text=" Đ" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow-bottom-menu" />
+                                    <String fx:value="card-clip" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <AnchorPane minHeight="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="190.0" prefWidth="233.0">
+                                             <children>
+                                                <ImageView fx:id="productImage1" fitHeight="220.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="false">
+                                                   <image>
+                                                      <Image url="@../Product/snapedit_1742120180494-removebg-preview.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="productName1" maxWidth="200.0" minHeight="-Infinity" text="The Coffee House Sữa Đá" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="productPrice1" text="Price" textFill="#34231a">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text=" Đ" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow-bottom-menu" />
+                                    <String fx:value="card-clip" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <AnchorPane minHeight="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="190.0" prefWidth="233.0">
+                                             <children>
+                                                <ImageView fx:id="productImage2" fitHeight="220.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="false">
+                                                   <image>
+                                                      <Image url="@../Product/snapedit_1742120180494-removebg-preview.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="productName2" maxWidth="200.0" minHeight="-Infinity" text="The Coffee House Sữa Đá" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="productPrice2" text="Price" textFill="#34231a">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text=" Đ" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow-bottom-menu" />
+                                    <String fx:value="card-clip" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <AnchorPane minHeight="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="190.0" prefWidth="233.0">
+                                             <children>
+                                                <ImageView fx:id="productImage3" fitHeight="220.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="false">
+                                                   <image>
+                                                      <Image url="@../Product/snapedit_1742120180494-removebg-preview.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="productName3" maxWidth="200.0" minHeight="-Infinity" text="The Coffee House Sữa Đá" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="productPrice3" text="Price" textFill="#34231a">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text=" Đ" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow-bottom-menu" />
+                                    <String fx:value="card-clip" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <AnchorPane minHeight="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@/application/menu.css" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="89.0" layoutY="36.0" prefHeight="368.0" prefWidth="260.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="190.0" prefWidth="233.0">
+                                             <children>
+                                                <ImageView fx:id="productImage4" fitHeight="220.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="false">
+                                                   <image>
+                                                      <Image url="@../Product/snapedit_1742120180494-removebg-preview.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="productName4" maxWidth="200.0" minHeight="-Infinity" text="The Coffee House Sữa Đá" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <children>
+                                                      <Label fx:id="productPrice4" text="Price" textFill="#34231a">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text=" Đ" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="shadow-bottom-menu" />
+                                    <String fx:value="card-clip" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </FlowPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="40.0" right="40.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailsOrderController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-border-color: #532b12;">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Chi tiết hóa đơn" textFill="#532b12">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="82.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Tên khách hàng:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="customerName" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Địa chỉ:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <VBox maxWidth="500.0" prefWidth="500.0">
+                           <children>
+                              <Label fx:id="customerAddress" maxWidth="-Infinity" minHeight="-Infinity" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Sdt:" textFill="#532b12">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label fx:id="customerPhone" layoutX="10.0" layoutY="250.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Email:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="customerEmail" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Hóa đơn:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="customerOrderID" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="150.0" text="Ghi chú:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="customerNote" layoutX="10.0" layoutY="170.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Ngày mua hàng:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="customerDate" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <TableView fx:id="tableOrderDetailList" prefHeight="370.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="productName" prefWidth="135.99994772672653" text="Sản phẩm" />
+                      <TableColumn fx:id="productPrice" prefWidth="65.60003662109375" text="Giá" />
+                        <TableColumn fx:id="productQuantity" prefWidth="36.79998779296875" text="SL" />
+                        <TableColumn fx:id="productSize" prefWidth="32.00004577636719" text="Size" />
+                        <TableColumn fx:id="productTopping" prefWidth="118.40008544921875" text="Topping" />
+                        <TableColumn fx:id="productTotalUnit" prefWidth="91.199951171875" text="Tổng" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="TOP_RIGHT" prefHeight="110.0" prefWidth="500.0">
+                     <children>
+                        <Label text="Cộng tiền:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="orderToTal" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Phí vận chuyển:" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="25,000">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Tổng chi phí (bao gồm thuế 10%):" textFill="#532b12">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="orderToTalVAT" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>
