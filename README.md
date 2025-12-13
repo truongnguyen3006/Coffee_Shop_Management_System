@@ -46,8 +46,6 @@ Hệ thống được tổ chức theo mô hình MVC tiêu chuẩn:
 * **Model:** Các thực thể dữ liệu (Product, User, Order) và lớp truy xuất DB (Repository).
 * **External Services:** Module xử lý riêng cho RabbitMQ và JavaMail.
 
-*(Bạn có thể chèn hình ảnh sơ đồ MVC từ báo cáo Hình 2.1 vào đây)*
-
 ## ⚙️ Hướng dẫn Cài đặt & Chạy
 
 ### 1. Yêu cầu hệ thống
