@@ -1,0 +1,48 @@
+.gradient {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #430e03, #ae4f3a);
+}
+
+.white-form{
+	-fx-background-color: #fff;
+}
+	
+.head-label{
+	-fx-border-color: #430e03;
+	-fx-border-width: 0px 0px 0px 5px;
+	-fx-padding: 0px 0px 0px 5px;
+}
+
+.login-btn {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #430e03, #ae4f3a);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill: white; /* 14px không hợp lệ, đổi thành màu */
+    -fx-font-size: 14px; /* Nếu muốn chỉnh cỡ chữ */
+}
+
+.login-btn:hover{
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ae4f3a, #efa191);
+}
+
+.textfield {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #430e03, #ae4f3a); /* Sửa cú pháp */
+    -fx-border-width: 0.5px; /* Thêm số 0 phía trước để rõ ràng */
+}
+
+.textfield:focused {
+    -fx-border-width: 1px;
+}
+
+.create-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: white; /* Đổi từ mã màu #fff */
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+.create-btn:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}

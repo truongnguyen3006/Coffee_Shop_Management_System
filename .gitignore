@@ -1,0 +1,41 @@
+# =========================
+# Build output
+# =========================
+bin/
+out/
+target/
+build/
+*.class
+*.log
+
+# =========================
+# IDE files
+# =========================
+.settings/
+.idea/
+.vscode/
+.classpath
+.project
+*.iml
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Local config / secrets
+# =========================
+app.properties
+.env
+.env.*
+config.properties
+application.properties
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.bak
+*.swp

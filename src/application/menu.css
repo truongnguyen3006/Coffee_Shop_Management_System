@@ -1,0 +1,112 @@
+
+.nav-btn{
+	-fx-background-color: transparent;
+	-fx-border-color: rgba(139, 69, 19, 0.5);
+	-fx-border-radius: 20;	
+}
+
+.nav-btn:hover{
+	-fx-background-color: #f7f2f2;
+	-fx-text-fill: brown;
+	-fx-background-radius: 20;
+}
+
+.nav-menu{
+	-fx-background-radius: 15;	
+}
+
+.top-menu:hover{
+	-fx-text-fill:  #c74f05;
+}
+
+.btn-logout{
+	-fx-border-color:  #532b12;
+	-fx-border-radius:  15;
+	-fx-background-color:  white;
+}
+
+.white-bg{
+	-fx-background-color: white;
+}
+
+
+.transparent{
+	-fx-background-color: transparent;
+}
+
+.search{
+	-fx-background-color: #828282;
+	-fx-background-radius: 30;
+	
+}
+
+.search-box{
+	
+	-fx-background-color: #a97474;
+	-fx-background-radius: 100;
+}
+
+.shadow-top-menu{
+    -fx-effect: dropshadow(three-pass-box, rgba(139, 69, 19, 0.5), 10, 0, 0, 1);
+}
+.shadow-bottom-menu{
+    -fx-effect: dropshadow(three-pass-box, rgba(139, 69, 19, 0.5), 10, 0, 0, 1);
+}
+
+.shadow-card{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+}
+
+.shadow-nav {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 15, 0.2, 0, 5);
+}
+
+.card-clip{
+	-fx-background-radius: 25 25 10 10 ;
+}
+
+.card-clip:hover{
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.9), 10, 0, 0, 0);
+}
+
+.detail-btn{
+	-fx-text-fill: #ecb997;
+	-fx-border-color: #e7e7e7;
+	-fx-background-color: white;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+}
+
+.detail-btn:hover{
+	-fx-background-color: #f7f2f2;
+	-fx-text-fill: #c19171;
+	-fx-background-radius: 10;
+	-fx-border-radius: 10;
+}
+
+.btn-addtocart{
+	-fx-background-color: white;
+	-fx-border-color: black;
+}
+
+.btn-addtocart:hover{
+	-fx-background-color: #532b12;
+	-fx-text-fill: white;
+}
+
+.no-shadow {
+    -fx-background-color: white; /* Màu nền */
+    -fx-background-insets: 0; 
+    -fx-background-radius: 0;
+    -fx-border-color: #ccc; /* Viền màu xám */
+    -fx-border-radius: 3px;
+    -fx-border-width: 1px;
+    -fx-effect: none; /* Loại bỏ hiệu ứng bóng */
+}
+
+
+
+.btn-choose-size{
+	-fx-border-color:  #34231a;
+	-fx-background-color:  transparent;
+}

@@ -1,0 +1,22 @@
+# =========================
+# DATABASE
+# =========================
+db.url=jdbc:mysql://localhost:3306/coffee?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+db.username=root
+db.password=
+
+# =========================
+# EMAIL (Gmail SMTP)
+# =========================
+mail.host=smtp.gmail.com
+mail.port=587
+mail.username=your_email@gmail.com
+mail.password=your_gmail_app_password
+
+# =========================
+# RABBITMQ
+# =========================
+rabbitmq.host=localhost
+rabbitmq.port=5672
+rabbitmq.username=guest
+rabbitmq.password=guest
