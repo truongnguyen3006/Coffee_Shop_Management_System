@@ -4,6 +4,16 @@ Desktop coffee shop management application built with **Java**, **JavaFX**, **FX
 
 This project was created to support common coffee shop operations such as authentication, menu browsing, shopping cart, order placement, order history, admin management, and customer support chat.
 
+## Highlights
+
+- Built a **JavaFX desktop application** for both **customers** and **administrators** in a coffee shop management workflow.
+- Implemented core business flows including **product browsing, cart management, order placement, and order history**.
+- Developed **admin modules** for **product management, order tracking, and revenue statistics dashboard**.
+- Integrated **RabbitMQ** to support **chat between customers and administrators**.
+- Used **JavaMail** for **OTP verification** and **order confirmation emails**.
+- Organized the project with a **layered structure** including controller, service, repository, model, and messaging components.
+- Connected the application to **MySQL** using **JDBC** for persistent data storage and transaction handling.
+
 ## Problem statement
 
 Small coffee shop systems are often split across multiple manual workflows:
