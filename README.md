@@ -282,3 +282,9 @@ Ví dụ JavaFX VM options:
 - Dự án này được thiết kế cho mục đích local và portfolio, và vẫn phụ thuộc vào việc thiết lập môi trường desktop.
 - Việc thiết lập RabbitMQ, SMTP và JavaFX có thể mất thời gian trên máy mới.
 - Một số file UI và resource vẫn giữ cách tổ chức từ dự án gốc thay vì layout Maven hoặc Gradle đầy đủ.
+
+## Tác giả
+
+- **Tên:** Nguyễn Lâm Trường
+- **Email:** lamtruongnguyen2004@gmail.com
+- **GitHub:** [https://github.com/truongnguyen3006](https://github.com/truongnguyen3006)
