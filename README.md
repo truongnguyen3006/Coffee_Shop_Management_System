@@ -1,75 +1,65 @@
-# Coffee Shop Management System
+# Hệ thống Quản lý Quán Cà Phê
 
-Desktop coffee shop management application built with **Java**, **JavaFX**, **FXML**, **MySQL**, **RabbitMQ**, and **JavaMail**.
+Ứng dụng desktop quản lý quán cà phê được xây dựng bằng **Java**, **JavaFX**, **FXML**, **MySQL**, **RabbitMQ** và **JavaMail**.
 
-This project was created to support common coffee shop operations such as authentication, menu browsing, shopping cart, order placement, order history, admin management, and customer support chat.
+Dự án này được tạo ra để hỗ trợ các nghiệp vụ phổ biến của quán cà phê như xác thực, duyệt menu, giỏ hàng, đặt món, lịch sử đơn hàng, quản trị viên và chat hỗ trợ khách hàng.
 
-## Highlights
+## Bài toán đặt ra
 
-- Built a **JavaFX desktop application** for both **customers** and **administrators** in a coffee shop management workflow.
-- Implemented core business flows including **product browsing, cart management, order placement, and order history**.
-- Developed **admin modules** for **product management, order tracking, and revenue statistics dashboard**.
-- Integrated **RabbitMQ** to support **chat between customers and administrators**.
-- Used **JavaMail** for **OTP verification** and **order confirmation emails**.
-- Organized the project with a **layered structure** including controller, service, repository, model, and messaging components.
-- Connected the application to **MySQL** using **JDBC** for persistent data storage and transaction handling.
+Các hệ thống quán cà phê quy mô nhỏ thường bị tách rời qua nhiều quy trình thủ công:
+- khách hàng đặt món thủ công,
+- quản trị viên theo dõi sản phẩm và đơn hàng trên các màn hình riêng biệt,
+- giao tiếp hỗ trợ bị rời rạc,
+- xác nhận đơn hàng chưa được tự động hóa.
 
-## Problem statement
+Dự án này tập trung các quy trình đó vào một ứng dụng desktop duy nhất cho cả **khách hàng** và **quản trị viên**.
 
-Small coffee shop systems are often split across multiple manual workflows:
-- customers place orders manually,
-- admins monitor products and orders in separate screens,
-- support communication is fragmented,
-- order confirmation is not automated.
+## Tính năng chính
 
-This project centralizes those workflows into one desktop application for both **customers** and **admins**.
+### Tính năng cho khách hàng
+- Đăng ký tài khoản
+- Đăng nhập và đăng xuất
+- Xác thực OTP qua email / khôi phục mật khẩu
+- Duyệt menu và chi tiết sản phẩm
+- Thêm sản phẩm vào giỏ hàng
+- Chọn size và topping
+- Đặt hàng
+- Xem lịch sử đơn hàng
+- Quản lý thông tin tài khoản
+- Chat với admin hỗ trợ
+- Nhận email xác nhận đơn hàng
 
-## Main features
+### Tính năng cho quản trị viên
+- Đăng nhập với vai trò admin
+- Xem tổng quan dashboard
+- Quản lý sản phẩm
+- Cập nhật trạng thái sản phẩm
+- Xem thông tin đơn hàng
+- Theo dõi thống kê doanh thu
+- Chat với người dùng
 
-### Customer features
-- Register account
-- Login and logout
-- OTP email verification / password recovery flow
-- Browse menu and product details
-- Add products to cart
-- Select size and toppings
-- Place orders
-- View order history
-- Manage account information
-- Chat with admin support
-- Receive order confirmation email
+## Ảnh chụp màn hình Demo
 
-### Admin features
-- Login as admin
-- View dashboard summary
-- Manage products
-- Update product status
-- Review order information
-- Monitor revenue statistics
-- Chat with users
-
-## Screenshots Demo
-
-### Login
+### Đăng nhập
 <img src="screenshots/login.png" alt="Login Screen" width="700">
 
-### Home 
+### Trang chủ
 <img src="screenshots/Home.png" alt="Login Screen" width="700">
 
-### Cart 
+### Giỏ hàng
 <img src="screenshots/Cart.png" alt="Login Screen" width="700">
 
-### Chat Client
+### Chat phía khách hàng
 <img src="screenshots/ChatClient.png" alt="Login Screen" width="700">
 
-### Admin Dashboard
+### Dashboard quản trị
 <img src="screenshots/Admin_Dashboard.png" alt="Login Screen" width="700">
 
-### Customer Support Chat
+### Chat hỗ trợ khách hàng
 <img src="screenshots/Customer_Support_Chat(1).png" alt="Login Screen" width="700">
 <img src="screenshots/Customer_Support_Chat(2).png" alt="Login Screen" width="700">
 
-## Tech stack
+## Công nghệ sử dụng
 
 - Java 23
 - JavaFX SDK 25
@@ -81,39 +71,39 @@ This project centralizes those workflows into one desktop application for both *
 - Gson
 - SLF4J
 
-## Architecture overview
+## Tổng quan kiến trúc
 
-After refactoring, the project is organized closer to a layered desktop architecture:
+Sau khi refactor, dự án được tổ chức gần với kiến trúc desktop phân lớp hơn:
 
 - `application/controller/`  
-  JavaFX controllers and UI flow handlers
+  Các controller JavaFX và lớp xử lý luồng giao diện
 - `application/model/`  
-  domain models, DTOs, and view models
+  Domain models, DTOs và view models
 - `application/service/`  
-  business logic such as authentication, cart, order, product, dashboard, revenue, email, OTP
+  Business logic như xác thực, giỏ hàng, đơn hàng, sản phẩm, dashboard, doanh thu, email, OTP
 - `application/repository/`  
-  database access logic
+  Logic truy cập cơ sở dữ liệu
 - `application/messaging/`  
-  RabbitMQ and chat related classes
+  Các lớp liên quan đến RabbitMQ và chat
 - `application/util/`  
-  validation, logging, scene navigation, resource loading
+  Validation, logging, điều hướng scene, load tài nguyên
 - `application/config/`  
-  session/config related classes
+  Các lớp liên quan đến session/cấu hình
 - `application/`  
-  application bootstrap, database/config helpers, shared alerts, and legacy compatibility wrappers
+  Bootstrap ứng dụng, helper database/config, alert dùng chung và các wrapper tương thích cũ
 - `sql/`  
-  schema and seed files
+  File schema và seed dữ liệu
 - `docs/`  
-  portfolio, demo, interview, and setup notes
+  Tài liệu portfolio, demo, phỏng vấn và hướng dẫn cài đặt
 - `screenshots/`  
-  place application screenshots for GitHub portfolio
+  Nơi đặt ảnh chụp màn hình ứng dụng cho portfolio GitHub
 
-Controllers now focus mainly on:
-- receiving UI input,
-- calling services,
-- updating JavaFX views.
+Các controller hiện nay chủ yếu tập trung vào:
+- nhận input từ UI,
+- gọi service,
+- cập nhật JavaFX views.
 
-## Project structure
+## Cấu trúc dự án
 
 ```text
 coffeeShopManagementSystem/
@@ -131,7 +121,7 @@ coffeeShopManagementSystem/
 │  │  ├─ service/
 │  │  ├─ util/
 │  │  ├─ *.fxml
-│  │  ├─ Main.java / shared bootstrap classes
+│  │  ├─ Main.java / các lớp bootstrap dùng chung
 │  │  └─ *.css
 │  ├─ Banner/
 │  ├─ Image/
@@ -141,9 +131,9 @@ coffeeShopManagementSystem/
 └─ .gitignore
 ```
 
-## Requirements
+## Yêu cầu môi trường
 
-Click the items below to open the official download pages:
+Nhấp vào các mục bên dưới để mở trang tải chính thức:
 
 - Windows 10/11
 - [JDK 23 (Eclipse Temurin)](https://adoptium.net/temurin/releases/?arch=any&os=any&package=jdk&version=23)
@@ -151,11 +141,11 @@ Click the items below to open the official download pages:
 - [MySQL 8.x](https://dev.mysql.com/downloads/mysql/)
 - [RabbitMQ](https://www.rabbitmq.com/docs/download)
 - [Erlang/OTP](https://www.erlang.org/downloads)
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) or [Eclipse](https://www.eclipse.org/downloads/)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) hoặc [Eclipse](https://www.eclipse.org/downloads/)
 
-## Tested environment
+## Môi trường đã kiểm thử
 
-This project was tested in the following environment:
+Dự án này đã được kiểm thử trong môi trường sau:
 
 - Windows 10/11
 - JDK 23
@@ -163,13 +153,13 @@ This project was tested in the following environment:
 - IntelliJ IDEA / Eclipse
 - MySQL 8.x
 - RabbitMQ 4.x
-- Erlang/OTP compatible with RabbitMQ
+- Erlang/OTP tương thích với RabbitMQ
 
-## Configuration
+## Cấu hình
 
-Create a local `app.properties` file in the project root based on `app.properties.example`.
+Tạo file `app.properties` cục bộ ở thư mục gốc dự án dựa trên `app.properties.example`.
 
-Example:
+Ví dụ:
 
 ```properties
 db.url=jdbc:mysql://localhost:3306/coffee?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
@@ -187,40 +177,40 @@ rabbitmq.username=guest
 rabbitmq.password=guest
 ```
 
-> Do not commit `app.properties` to GitHub.
+> Không commit `app.properties` lên GitHub.
 
-## Database setup
+## Thiết lập cơ sở dữ liệu
 
-### Option 1: portfolio/public demo data
-Recommended for GitHub and interview demo use.
+### Tùy chọn 1: dữ liệu demo cho portfolio/public
+Được khuyến nghị cho GitHub và demo phỏng vấn.
 
-1. Create database `coffee`
+1. Tạo cơ sở dữ liệu `coffee`
 2. Import `sql/schema.sql`
 3. Import `sql/seed.sql`
 
-Demo accounts:
+Tài khoản demo:
 - Admin: `admin` / `Admin@123`
 - User: `demo_user` / `User@123`
 
-### Option 2: quick local demo data
-1. Create database `coffee`
+### Tùy chọn 2: dữ liệu demo local nhanh
+1. Tạo cơ sở dữ liệu `coffee`
 2. Import `sql/schema.sql`
 3. Import `sql/seed-lite.sql`
 
-### Option 3: full original local data
-1. Create database `coffee`
+### Tùy chọn 3: dữ liệu local đầy đủ từ bản gốc
+1. Tạo cơ sở dữ liệu `coffee`
 2. Import `sql/schema.sql`
 3. Import `sql/legacy/seed-full-from-original.sql`
 
-## Manual IDE setup
+## Thiết lập thủ công trong IDE
 
-This project currently does not use Maven or Gradle, so some dependencies must be configured manually in the IDE.
+Dự án hiện tại chưa dùng Maven hoặc Gradle, nên một số dependency cần được cấu hình thủ công trong IDE.
 
-### 1. Add local libraries from the `lib/` folder
+### 1. Thêm thư viện cục bộ từ thư mục `lib/`
 
-Add all `.jar` files inside the `lib/` directory to your project libraries or classpath.
+Thêm tất cả file `.jar` trong thư mục `lib/` vào project libraries hoặc classpath.
 
-Examples include:
+Ví dụ gồm:
 - `amqp-client`
 - `gson`
 - `mysql-connector-j`
@@ -229,66 +219,66 @@ Examples include:
 - `fontawesomefx`
 - `jxmaps`
 
-### 2. Add JavaFX SDK 25 manually
+### 2. Thêm JavaFX SDK 25 thủ công
 
-Download JavaFX SDK 25 and configure it in your IDE.
+Tải JavaFX SDK 25 và cấu hình trong IDE.
 
-Make sure the JavaFX `lib` folder is used in:
+Đảm bảo thư mục `lib` của JavaFX được dùng trong:
 - project libraries
 - module path / VM options
 
-Example VM options:
+Ví dụ VM options:
 
 ```bash
 --module-path "C:\path\to\javafx-sdk-25\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base
 ```
 
-### 3. Open and run the main class
+### 3. Mở và chạy class chính
 
-Run:
+Chạy:
 
 ```text
 src/application/Main.java
 ```
 
-## How to run
+## Cách chạy
 
-1. Install JDK 23
-2. Install JavaFX SDK 25
-3. Install MySQL and create the `coffee` database
-4. Import SQL files
-5. Install Erlang/OTP
-6. Install and start RabbitMQ
-7. Create local `app.properties`
-8. Open the project in your IDE
-9. Add all `.jar` files inside the `lib/` folder to the project
-10. Configure JavaFX SDK 25 in the IDE
-11. Set the JavaFX VM options
-12. Run `src/application/Main.java`
+1. Cài JDK 23
+2. Cài JavaFX SDK 25
+3. Cài MySQL và tạo cơ sở dữ liệu `coffee`
+4. Import các file SQL
+5. Cài Erlang/OTP
+6. Cài và khởi động RabbitMQ
+7. Tạo file `app.properties` cục bộ
+8. Mở dự án trong IDE
+9. Thêm tất cả file `.jar` trong thư mục `lib/` vào project
+10. Cấu hình JavaFX SDK 25 trong IDE
+11. Thiết lập JavaFX VM options
+12. Chạy `src/application/Main.java`
 
-Example JavaFX VM options:
+Ví dụ JavaFX VM options:
 
 ```bash
 --module-path "C:\path\to\javafx-sdk-25\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base
 ```
 
-## Important notes
+## Lưu ý quan trọng
 
-- JavaFX is not bundled with JDK 23, so JavaFX SDK must be added manually.
-- This project currently depends on manual IDE setup because it does not use Maven or Gradle yet.
-- RabbitMQ and Erlang/OTP are required for the chat feature.
-- Email sending requires a valid SMTP configuration.
-- If you use Gmail SMTP, you must use a Gmail App Password instead of your normal Gmail password.
-- `seed.sql` is the recommended public-friendly demo seed.
-- `seed-lite.sql` is a lightweight alternative for quick local setup.
-- `sql/legacy/seed-full-from-original.sql` is much larger and may not be suitable for a public repository.
+- JavaFX không còn được đóng gói sẵn trong JDK 23, vì vậy cần thêm JavaFX SDK thủ công.
+- Dự án hiện vẫn phụ thuộc vào việc thiết lập thủ công trong IDE vì chưa dùng Maven hoặc Gradle.
+- RabbitMQ và Erlang/OTP là bắt buộc cho tính năng chat.
+- Gửi email yêu cầu cấu hình SMTP hợp lệ.
+- Nếu dùng Gmail SMTP, bạn phải dùng **Gmail App Password** thay vì mật khẩu Gmail thông thường.
+- `seed.sql` là bộ seed demo được khuyến nghị cho mục đích công khai.
+- `seed-lite.sql` là lựa chọn nhẹ hơn cho thiết lập local nhanh.
+- `sql/legacy/seed-full-from-original.sql` lớn hơn nhiều và có thể không phù hợp cho repo public.
 
-## Portfolio docs
+## Tài liệu portfolio
 
-- Setup troubleshooting: `docs/SETUP_TROUBLESHOOTING_VI.md`
+- Xử lý sự cố cài đặt: `docs/SETUP_TROUBLESHOOTING_VI.md`
 
-## Limitations
+## Giới hạn
 
-- This project is designed for local and portfolio use and still depends on desktop environment setup.
-- RabbitMQ, SMTP, and JavaFX setup may take time on a new machine.
-- Some UI and resource files still follow the original project organization rather than a full Maven or Gradle layout.
+- Dự án này được thiết kế cho mục đích local và portfolio, và vẫn phụ thuộc vào việc thiết lập môi trường desktop.
+- Việc thiết lập RabbitMQ, SMTP và JavaFX có thể mất thời gian trên máy mới.
+- Một số file UI và resource vẫn giữ cách tổ chức từ dự án gốc thay vì layout Maven hoặc Gradle đầy đủ.
