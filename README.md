@@ -182,7 +182,6 @@ rabbitmq.password=guest
 ## Thiết lập cơ sở dữ liệu
 
 ### Tùy chọn 1: dữ liệu demo cho portfolio/public
-Được khuyến nghị cho GitHub và demo phỏng vấn.
 
 1. Tạo cơ sở dữ liệu `coffee`
 2. Import `sql/schema.sql`
@@ -275,8 +274,8 @@ Ví dụ JavaFX VM options:
 
 ## Tài liệu portfolio
 
-- Xử lý sự cố cài đặt: `docs/SETUP_TROUBLESHOOTING_VI.md`
-
+- Xử lý sự cố cài đặt: [Xem tài liệu](./docs/SETUP_TROUBLESHOOTING_VI.md)
+  
 ## Giới hạn
 
 - Dự án này được thiết kế cho mục đích local và portfolio, và vẫn phụ thuộc vào việc thiết lập môi trường desktop.
