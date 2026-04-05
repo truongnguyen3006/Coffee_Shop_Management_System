@@ -274,7 +274,7 @@ Ví dụ JavaFX VM options:
 
 ## Tài liệu portfolio
 
-- Xử lý sự cố cài đặt: [Xem tài liệu](./docs/SETUP_TROUBLESHOOTING_VI.md)
+- Xử lý sự cố cài đặt: [docs/SETUP_TROUBLESHOOTING_VI.md](./docs/SETUP_TROUBLESHOOTING_VI.md)
   
 ## Giới hạn
 
